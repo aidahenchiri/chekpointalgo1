@@ -1,0 +1,43 @@
+ALGORITHM NUMBER_OF_CHARACTERS
+VAR
+    str:STRING :="the best in the wold."
+    count:INTEGER:=0
+BEGIN
+FOR(int i:=0,i<str.lenth(),i++)do
+    IF(str.charAT[i]) THEN
+    END_IF
+END_FOR
+WRITE(count)
+END
+
+ALGORITHM NUMBER_OF_WORDS
+VAR
+    str:STRING :="the best in the wold."
+    count:INTEGER:=0
+BEGIN
+FOR(int i:=0,i<str.lenth(),i++)do
+    IF(str[i]==" ") THEN
+    count++;
+    END_IF
+END_FOR
+count++;
+WRITE(count)
+END
+
+
+ALGORITHM NUMBER_OF_VOWELS
+VAR
+    str:STRING :="the best in the wold."
+    count:INTEGER:=0
+    vowels:ARRAY_OF CHAR[6]:=["a","o","i","u","e","y"]
+BEGIN
+FOR(int i:=0,i<str.lenth(),i++)do
+    FOR(int j:=0,j<6,j++)do
+    IF(str[i]in vowels[j]) THEN
+    count++;
+    END_IF
+END_FOR
+count++;
+WRITE(count)
+END
+
